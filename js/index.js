@@ -51,6 +51,8 @@ navItems[2].textContent = siteContent["nav"]["nav-item-3"];
 navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+navItems.forEach(item => item.style.color = 'green');
+
 
 let headline = document.querySelector('h1');
 headline.textContent = "DOM\r\nIs\r\nAwesome"
