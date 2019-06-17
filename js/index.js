@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.alt = "Great Idea! Company logo."
 
 let navBar = document.querySelector('nav');
 
@@ -52,13 +53,15 @@ navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 let headline = document.querySelector('h1');
-headline.textContent = siteContent["cta"]["h1"];
+headline.textContent = "DOM\r\nIs\r\nAwesome"
+headline.setAttribute('style', 'white-space: pre;')
 
 let button = document.querySelector('button');
-button.setAttribute('button',siteContent["cta"]["button"]);
+button.textContent = siteContent["cta"]["button"];
 
 let headlineImg = document.getElementById('cta-img');
 headlineImg.setAttribute('src',siteContent["cta"]["img-src"]);
+headlineImg.alt = "Image of a code snippet."
 
 let topHeadlines = document.querySelectorAll(".top-content .text-content h4");
 topHeadlines[0].textContent = siteContent["main-content"]["features-h4"];
@@ -70,6 +73,7 @@ topContent[1].textContent = siteContent["main-content"]["about-content"];
 
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+middleImg.alt="Image of code snippets across the screen"
 
 let bottomHeadlines = document.querySelectorAll(".bottom-content .text-content h4");
 bottomHeadlines[0].textContent = siteContent["main-content"]["services-h4"];
@@ -85,7 +89,8 @@ let contactHeading = document.querySelector(".contact h4");
 contactHeading.textContent = siteContent["contact"]["contact-h4"];
 
 let contact = document.querySelectorAll(".contact p");
-contact[0].textContent = siteContent["contact"]["address"];
+contact[0].textContent = "123 Way 456 Street\r\nSomewhere, USA"
+contact[0].setAttribute('style', 'white-space: pre;')
 contact[1].textContent = siteContent["contact"]["phone"];
 contact[2].textContent = siteContent["contact"]["email"];
 
