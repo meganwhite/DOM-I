@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.alt = "Great Idea! Company logo."
+
+let navBar = document.querySelector('nav');
+
+let navItems = document.querySelectorAll('a');
+navItems[0].textContent = siteContent["nav"]["nav-item-1"];
+navItems[1].textContent = siteContent["nav"]["nav-item-2"];
+navItems[2].textContent = siteContent["nav"]["nav-item-3"];
+navItems[3].textContent = siteContent["nav"]["nav-item-4"];
+navItems[4].textContent = siteContent["nav"]["nav-item-5"];
+navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+navItems.forEach(item => item.style.color = 'green');
+let node1 = document.createElement('a');
+node1.textContent = "Gallery";
+node1.style.color = "green";
+let node2 = document.createElement('a');
+node2.textContent = "Danger!";
+navBar.appendChild(node1);
+navBar.prepend(node2);
+node2.style.color = "green";
+
+
+
+let headline = document.querySelector('h1');
+headline.textContent = "DOM\r\nIs\r\nAwesome"
+headline.setAttribute('style', 'white-space: pre;')
+
+let button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+
+let headlineImg = document.getElementById('cta-img');
+headlineImg.setAttribute('src',siteContent["cta"]["img-src"]);
+headlineImg.alt = "Image of a code snippet."
+
+let topHeadlines = document.querySelectorAll(".top-content .text-content h4");
+topHeadlines[0].textContent = siteContent["main-content"]["features-h4"];
+topHeadlines[1].textContent = siteContent["main-content"]["about-h4"];
+
+let topContent = document.querySelectorAll(".top-content .text-content p");
+topContent[0].textContent = siteContent["main-content"]["features-content"];
+topContent[1].textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src',siteContent["main-content"]["middle-img-src"]);
+middleImg.alt="Image of code snippets across the screen"
+
+let bottomHeadlines = document.querySelectorAll(".bottom-content .text-content h4");
+bottomHeadlines[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeadlines[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeadlines[2].textContent = siteContent["main-content"]["vision-h4"];
+
+let bottomContent = document.querySelectorAll(".bottom-content .text-content p");
+bottomContent[0].textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
+
+let contactHeading = document.querySelector(".contact h4");
+contactHeading.textContent = siteContent["contact"]["contact-h4"];
+
+let contact = document.querySelectorAll(".contact p");
+contact[0].textContent = "123 Way 456 Street\r\nSomewhere, USA"
+contact[0].setAttribute('style', 'white-space: pre;')
+contact[1].textContent = siteContent["contact"]["phone"];
+contact[2].textContent = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
